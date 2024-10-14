@@ -13,8 +13,8 @@ namespace Game
 
         public override int TakePins(Board board)
         {
-            int sticksToTake = random.Next(1, 3); // Väljer 1 eller 2
-            Console.WriteLine($"{name} tar {sticksToTake} stickor.");
+            int sticksToTake = random.Next(1, 2); // Väljer 1 eller 2
+            Console.WriteLine($"{Name} tar {sticksToTake} stickor.");
             board.TakeSticks(sticksToTake);
             return sticksToTake;
         }

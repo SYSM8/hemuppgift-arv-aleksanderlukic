@@ -2,11 +2,11 @@
 {
     public abstract class Player
     {
-        protected string name;
+        public string Name { get; protected set; }
 
         public Player(string name)
         {
-            this.name = name;
+            this.Name = name;
         }
 
         public abstract int TakePins(Board board);
