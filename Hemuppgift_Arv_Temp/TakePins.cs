@@ -7,8 +7,8 @@ namespace Game
         static void Main(string[] args)
         {
             Board board = new Board(10); // Starta med 10 stickor
-            Player human = new HumanPlayer("Alicent");
-            Player computer = new ComputerPlayer("Aemond");
+            Player human = new HumanPlayer("Alex");
+            Player computer = new ComputerPlayer("Datorn");
 
             while (!board.IsEmpty())
             {
