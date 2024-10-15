@@ -1,12 +1,30 @@
-﻿namespace Hemuppgift_Arv_Temp
+﻿using System;
+
+namespace Game
 {
-    internal class TakePins
+    class TakePinsGame
     {
-        //Här är main klassen där koden ska testas, lägg in i mappen
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-        }
+            Board board = new Board(10); // Starta med 10 stickor
+            Player human = new HumanPlayer("Alex");
+            Player computer = new ComputerPlayer("Datorn");
 
+            while (!board.IsEmpty())
+            {
+                human.TakePins(board);
+                if (board.IsEmpty())
+                {
+                    Console.WriteLine($"{human.Name} vinner!");
+                    break;
+                }
+
+                computer.TakePins(board);
+                if (board.IsEmpty())
+                {
+                    Console.WriteLine($"{computer.Name} vinner!");
+                }
+            }
+        }
     }
 }
